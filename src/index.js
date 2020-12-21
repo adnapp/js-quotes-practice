@@ -23,6 +23,8 @@ function renderQuote(quote){
    <br>
    <button class='btn-success' data-id=${quote.id}>Likes: <span>${quote.likes.length}</span></button>
    <button class='btn-danger' data-id=${quote.id}>Delete</button>
+   <button class='btn-edit' data-id=${quote.id}>Edit</button>
+
    </blockquote>
  </li>
    `
@@ -81,7 +83,7 @@ quoteList.addEventListener("click", (event)=> {
         numericLikes = parseInt(numericLikes)
         numericLikes = numericLikes + 1
         // debugger
-        patchObj = {
+        updateLikeObj = {
             quoteId: id,
             likes: numericLikes
         }
@@ -91,7 +93,7 @@ quoteList.addEventListener("click", (event)=> {
             headers: {
                 "Content-Type": "application/json"
             },
-            body: JSON.stringify(patchObj)
+            body: JSON.stringify(updateLikeObj)
         })
         .then(res => res.json())
         .then(data => {

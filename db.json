@@ -54,6 +54,12 @@
       "id": 11,
       "quote": "The here and now is all we have, and if we play it right it's all we'll need.",
       "author": "Ann Richards"
+    },
+    {
+      "quote": "Protect yo neck",
+      "author": "Wu Tang",
+      "likes": [],
+      "id": 12
     }
   ],
   "likes": [
@@ -146,6 +152,11 @@
       "quoteId": 1,
       "likes": 9,
       "id": 23
+    },
+    {
+      "quoteId": 12,
+      "likes": 1,
+      "id": 24
     }
   ]
 }
